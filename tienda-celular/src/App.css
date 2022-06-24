@@ -4,4 +4,6 @@
 }
 body{
     background-color: rgb(88, 152, 225);
+    position: relative;
+    z-index: -1000;
 }

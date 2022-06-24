@@ -1,5 +1,5 @@
 import React from "react";
-/* import logo from "../../assets/logo.png" */
+import CartWidget from '../CartWidget/CartWidget'
 
 
 const Cards = (props) => {
@@ -9,7 +9,7 @@ const Cards = (props) => {
             <div class="card-body mx-auto">
                 <h5 class="card-title">{props.name}</h5>
                 <p class="card-text">{props.price}</p>
-                <a href="/" class="btn btn-primary">Add cart</a>
+                <CartWidget stock= '10' initial= '1'/>
             </div>
         </div>
     );
@@ -18,7 +18,9 @@ const Cards = (props) => {
 const styles = {
     cardContainer: {
         padding: 5,
-        width: '20%'
+        width: '20%',
+        position: 'relative',
+
     },
     cardImg: {
         width: '80%',

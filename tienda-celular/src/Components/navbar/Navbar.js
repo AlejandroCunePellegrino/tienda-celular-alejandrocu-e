@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.png"
 import cart from "../../assets/cart.png"
+import CartWidget from '../CartWidget/CartWidget'
 
 
 
@@ -27,7 +28,10 @@ const Navbar = () =>{
         alignItems: 'center',
         borderBottom: 'solid 1px black',
         height: '150px',
-        backgroundColor: '#fffcff'
+        backgroundColor: '#fffcff',
+        position: 'sticky',
+        top: '0px',
+        zIndex: '100'
     },
     imageLogo: {
         width: '20%',
