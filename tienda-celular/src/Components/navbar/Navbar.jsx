@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../assets/logo.png"
-import cart from "../../assets/cart.png"
 import CartWidget from '../CartWidget/CartWidget'
 
 
@@ -9,14 +8,14 @@ const Navbar = () =>{
     return (
         <header style={styles.container}>
             <img src={logo} alt="logo" style={styles.imageLogo} />
-            <h1>TIENDA CELULARES</h1>
+            <h1 style={styles.font}>Tienda celulares</h1>
             <nav>
                 <a href="#samnsung" style={styles.anchors}>Samnsung</a>
                 <a href="#motorola" style={styles.anchors}>Motorola</a>
                 <a href="#xiaomi" style={styles.anchors}>Xiaomi</a>
                 <a href="#iphone" style={styles.anchors}>Iphone</a>
             </nav>
-            <img src={cart} alt="cart" style={styles.imageCart}/>
+            <CartWidget />
         </header>
     );
 };
@@ -47,8 +46,11 @@ const Navbar = () =>{
     anchors: {
         padding: 10,
         textDecoration: 'none',
-        color: 'black'
-    }   
+        color: 'black',
+    },
+    font: {
+        fontFamily:`'Signika Negative', sans-serif`
+    } 
 }  
 
 export default Navbar;

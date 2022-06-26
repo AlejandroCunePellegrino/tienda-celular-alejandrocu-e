@@ -11,10 +11,10 @@ const Main = () => {
         <main class= "container-fluid">
             <div class= "row justify-content-center" style={styles.section} id="samnsung">
                 <h2 class="text-center">Samnsung</h2>
-                <Cards name='Samnsung Galaxy A20' price='$ 50.990'  image= {a20}/> 
-                <Cards name='Samnsung Galaxy A12' price='$ 44.999' image= {a12}/> 
-                <Cards name='Samnsung Galaxy S22 Ultra' price='$ 262.999' image= {s22} /> 
-                <Cards name='Samnsung Galaxy S20 FE' price='$ 91.999' image= {s20} /> 
+                <Cards name='Samnsung Galaxy A20' price='$ 50.990'  image= {a20} stock= '10' /> 
+                <Cards name='Samnsung Galaxy A12' price='$ 44.999' image= {a12} stock= '12'/> 
+                <Cards name='Samnsung Galaxy S22 Ultra' price='$ 262.999' image= {s22} stock= '5' /> 
+                <Cards name='Samnsung Galaxy S20 FE' price='$ 91.999' image= {s20} stock= '8' /> 
             </div>
             <div class= "row justify-content-center" id="motorola" style={styles.section}>
                 <h2 class="text-center">Motorola</h2>
@@ -42,9 +42,9 @@ const Main = () => {
 };
 
 const styles = {
-    container: {
-        border: 'solid 1px black'
-    },
+    /* container: {
+        
+    }, */
     section: {
         height: '600px'
     }
