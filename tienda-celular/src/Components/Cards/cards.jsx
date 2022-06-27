@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import card from './card.css'
 import addCart from '../../assets/addCart.png'
+import Swal from 'sweetalert2'
 
 
 /* ItemCount */
@@ -13,8 +14,9 @@ const Cards = ({name, price, image, stock, initial}) => {
         }
     } 
 
-    let addToCart = () =>{
-        alert(`Se agregaron ${amount} ${name} al carrito`);
+    const addToCart = () =>{
+        Swal.fire(`Se agregaron ${amount} ${name} al carrito`)
+        /* alert(`Se agregaron ${amount} ${name} al carrito`); */
     }
 
     return(
