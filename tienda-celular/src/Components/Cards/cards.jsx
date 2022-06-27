@@ -1,28 +1,36 @@
 import React, {useState} from "react";
-/* import CartWidget from '../CartWidget/CartWidget' */
+import card from './card.css'
+import addCart from '../../assets/addCart.png'
 
 
-const Cards = ({name, price, image, stock}) => {
+/* ItemCount */
+const Cards = ({name, price, image, stock, initial}) => {
+    const [amount, setAmount] = useState(1)
+    const count = (value) => { 
+        let result = amount + value;
+        if(result <= stock & result >= initial){
+            setAmount(amount+value)
+        }
+    } 
 
-    const [contador, setContador] = useState(0)
-    const amount = (value) => {
-        /* let resultado = contador + value; */
-
-        setContador(contador+value)
-        
+    let addToCart = () =>{
+        alert(`Se agregaron ${amount} ${name} al carrito`);
     }
 
     return(
-        <div class="card col-3 m-1" style={styles.cardContainer} >
-            <img src= {image} class="card-img-top" style={styles.cardImg} alt="A20" />
-            <div class="card-body mx-auto">
-                <h5 class="card-title">{name}</h5>
-                <p class="card-text">{price}</p>
+        <div className="card col-3 m-1" style={styles.cardContainer} >
+            <img src= {image} className="card-img-top" style={styles.cardImg} alt="A20" />
+            <div className="card-body mx-auto">
+                <h5 className="card-title">{name}</h5>
+                <p className="card-text">{price}</p>
             </div>
-            <div class="d-flex justify-content-between">
-                <span onClick={()=>amount(-1)}>-</span>
-                <span>{contador} | {stock}</span>
-                <span onClick={()=>amount(+1)}>+</span>
+            <div className="containerCart">
+                <span onClick={()=>addToCart()}><img src={addCart} alt="addcart"  className="cartImg"/></span>
+            </div>
+            <div className="d-flex justify-content-between containerBtn">
+                <span onClick={()=>count(-1)} className= "btn btnResta">-</span>
+                <span>{amount} | {stock}</span>
+                <span onClick={()=>count(+1)} className= "btn btnSuma" >+</span>
             </div>
         </div>
     );

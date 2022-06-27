@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import cart from '../../assets/cart.png';
 
 const CartWidget = () => {
     return(
-        <button style={styles.buttom}>
-            <img src={cart} alt="cart" style={styles.img} />
-        </button>
+        <div>
+            <button style={styles.buttom}>
+                <img src={cart} alt="cart" style={styles.img} />
+            </button>
+        </div>
     )
     
 }
