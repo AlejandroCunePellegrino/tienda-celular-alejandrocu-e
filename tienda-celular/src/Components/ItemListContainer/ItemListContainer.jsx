@@ -1,11 +1,11 @@
 import React from "react";
-import Main from '../main/Main'
+import ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = ({greeting}) => {
     return(
         <div>
             <h2 class="text-center">{greeting}</h2>
-            <Main />
+            <ItemList />
         </div>
     )
 }

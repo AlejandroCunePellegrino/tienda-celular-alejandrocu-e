@@ -1,0 +1,21 @@
+[
+    {"id": 1,
+    "name": "Samnsung Galaxy A20",
+    "image": "../images/a20.jpg",
+    "price": "$ 50.990"},
+
+    {"id": 2,
+    "name": "Samnsung Galaxy A12",
+    "image": "../images/a12.jpg",
+    "price": "$ 44.999"},
+
+    {"id": 3,
+    "name": "Samnsung Galaxy S22 Ultra",
+    "image": "../images/a2.jpg",
+    "price": "$ 262.999"},
+
+    {"id": 4,
+    "name": "Samnsung Galaxy S20 FE",
+    "image": "../images/s20.jpg",
+    "price": "$ 91.999"}
+]
