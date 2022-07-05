@@ -26,7 +26,7 @@ const Navbar = () =>{
         justifyContent : 'space-between',
         alignItems: 'center',
         borderBottom: 'solid 1px black',
-        height: '150px',
+        height: '125px',
         backgroundColor: '#fffcff',
         position: 'sticky',
         top: '0px',

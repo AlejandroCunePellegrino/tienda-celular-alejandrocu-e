@@ -1,28 +1,33 @@
+import a20 from '../assets/images/a20.jpg'
+import a12 from '../assets/images/a12.jpg'
+import s20 from '../assets/images/s20.jpg'
+import s22 from '../assets/images/s22.jpg' 
+
 const products = [
     {id: '1',
     name: "Samnsung Galaxy A20",
-    image: "../src/assets/images/a20.jpg",
+    image: 'https://http2.mlstatic.com/D_NQ_NP_2X_832807-MLA48008069170_102021-F.webp',
     price: "$ 50.990",
     stock: 10,
     initial: 1},
 
     {id: '2',
     name: "Samnsung Galaxy A12",
-    image: "../assets/images/a12.jpg",
+    image: {a12},
     price: "$ 44.999",
     stock: 8,
     initial: 1},
 
     {id: '3',
     name: "Samnsung Galaxy S22 Ultra",
-    image: "../assets/images/s22.jpg",
+    image: {s22},
     price: "$ 262.999",
     stock: 5,
     initial: 1},
 
     {id: '4',
     name: "Samnsung Galaxy S20 FE",
-    image: "../../assets/images/s20.jpg",
+    image: {s20},
     price: "$ 91.999",
     stock: 7,
     initial: 1}

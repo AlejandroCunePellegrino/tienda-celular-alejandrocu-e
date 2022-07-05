@@ -1,13 +1,17 @@
 import React from "react";
 import card from './card.css'
 import ItemCount from '../ItemCount/ItemCount'
-/* import productos from '../../assets/data/item.json' */
-/* import image from '../../assets/images/a12.jpg' */
+import a20 from '../../assets/images/a20.jpg'
+import a12 from '../../assets/images/a12.jpg'
+import s20 from '../../assets/images/s20.jpg'
+import s22 from '../../assets/images/s22.jpg' 
+
+
 
 
 const Item = ({name, price, image, stock, initial}) => {
    
-    
+    console.log({image});
     return(
         <div className="card col-3 m-1" style={styles.cardContainer} >
             <img src= {image} className="card-img-top" style={styles.cardImg} alt={name} />
@@ -25,7 +29,6 @@ const styles = {
         padding: 5,
         width: '20%',
         position: 'relative',
-
     },
     cardImg: {
         width: '80%',
