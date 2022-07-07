@@ -1,22 +1,27 @@
 import React, {useEffect, useState} from "react";
 import ItemList from '../ItemList/ItemList'
-import { getData } from "../../mocks/fakeapi";
-import Spinner from '../Spinner/Spinner'
+import { getProds } from "../../mocks/fakeapi";
+import Spinner from '../Spinner/Spinner';
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({greeting}) => {
     
     const [productList, setProductList] = useState([]);
     const [loading, setLoading] = useState(true); 
 
+    const {categoryId} = useParams();
     
 
     useEffect(() => {
-        getData
-        .then((response) => setProductList(response))
-        .catch((error) => console.log("clavo la pala", error))
+        setLoading(true)
+        getProds(categoryId)
+        .then(response => setProductList(response))
+        .catch(error => console.log("clavo la pala", error))
         .finally(() => setLoading(false))
+        /* console.log(categoryId); */
+        
 
-    },[]);
+    },[categoryId]);
     
     return(
         <div>

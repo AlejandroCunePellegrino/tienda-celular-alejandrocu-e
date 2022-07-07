@@ -1,6 +1,6 @@
 .containerBtn {
     border: solid 1px rgb(138, 134, 134);
-    /* box-shadow: 1px 1px 1px rgb(59, 59, 59); */
+    height: 20px;
     
 } 
 
@@ -37,7 +37,7 @@
 
 .containerCart span {
     width: 80%;
-    height: 55px;
+    height: 40px;
     display: flex;
     justify-content: center;
 }

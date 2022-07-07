@@ -2,14 +2,14 @@
 display: flex;
 justify-content: space-evenly;
 height: 400px;
-background-color: antiquewhite;
+background-color: #fffcff;
 width: 85%;
 margin: auto;
 }
 
 
 .box-img{
-    background-color: aliceblue;
+    background-color: #fffcff;
     width: 100%;
     display: flex;
     justify-content: center;

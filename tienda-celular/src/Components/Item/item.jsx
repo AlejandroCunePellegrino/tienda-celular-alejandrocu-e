@@ -1,23 +1,21 @@
 import React from "react";
 import card from './card.css'
 import ItemCount from '../ItemCount/ItemCount'
-import a20 from '../../assets/images/a20.jpg'
-import a12 from '../../assets/images/a12.jpg'
-import s20 from '../../assets/images/s20.jpg'
-import s22 from '../../assets/images/s22.jpg' 
+import { Link } from "react-router-dom";
 
 
 
 
-const Item = ({name, price, image, stock, initial}) => {
+
+const Item = ({name, price, image, stock, initial, product}) => {
    
-    console.log({image});
     return(
         <div className="card col-3 m-1" style={styles.cardContainer} >
             <img src= {image} className="card-img-top" style={styles.cardImg} alt={name} />
-            <div className="card-body mx-auto">
+            <div className="card-body box-info">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{price}</p>
+                <Link to={`/product/${product.id}`}>Ver detalles</Link>
             </div>
             <ItemCount stock={stock} initial={initial} name={name}/>
         </div>
@@ -29,11 +27,13 @@ const styles = {
         padding: 5,
         width: '20%',
         position: 'relative',
+        height: '500px'
     },
     cardImg: {
-        width: '80%',
+        width: '65%',
         objetFit: 'cover',
-        objetPosition: 'center center'
+        objetPosition: 'center center',
+        height: '250px'
     }
 }
 

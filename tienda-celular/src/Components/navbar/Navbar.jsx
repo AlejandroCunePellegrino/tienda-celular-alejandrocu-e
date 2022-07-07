@@ -1,21 +1,27 @@
 import React from "react";
 import logo from "../../assets/images/logo.png"
 import CartWidget from '../CartWidget/CartWidget'
+import {Link, NavLink} from 'react-router-dom'
 
 
 
 const Navbar = () =>{
+
+    const categories = [
+        {name: "Sanmsung", id: 0, route:"/category/samnsung"},
+        {name: "Motorola", id: 1, route:"/category/motorola"},
+        {name: "Xiaomi", id: 2, route:"/category/xiaomi"},
+        {name: "Iphone", id: 3, route:"/category/iphone"},
+    ]
+
     return (
         <header style={styles.container}>
-            <img src={logo} alt="logo" style={styles.imageLogo} />
+            <Link to="/"><img src={logo} alt="logo" style={styles.imageLogo} /></Link>
             <h1 style={styles.font}>Tienda celulares</h1>
             <nav>
-                <a href="#samnsung" style={styles.anchors}>Samnsung</a>
-                <a href="#motorola" style={styles.anchors}>Motorola</a>
-                <a href="#xiaomi" style={styles.anchors}>Xiaomi</a>
-                <a href="#iphone" style={styles.anchors}>Iphone</a>
+                {categories.map((category) => <NavLink key={category.id} style={styles.anchors} to={category.route}>{category.name}</NavLink>)}
             </nav>
-            <CartWidget />
+            <Link to="/cart"><CartWidget /></Link>   
         </header>
     );
 };
@@ -33,7 +39,7 @@ const Navbar = () =>{
         zIndex: '100'
     },
     imageLogo: {
-        width: '20%',
+        width: '80%',
         padding: '0',
         margin: '0',
         height: '150px'
@@ -50,7 +56,7 @@ const Navbar = () =>{
     },
     font: {
         fontFamily:`'Signika Negative', sans-serif`
-    } 
+    }
 }  
 
 export default Navbar;

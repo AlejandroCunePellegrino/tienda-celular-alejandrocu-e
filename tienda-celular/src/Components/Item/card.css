@@ -38,7 +38,7 @@
 
 .containerCart span {
     width: 50%;
-    height: 55px;
+    height: 50px;
     display: flex;
     justify-content: center;
 }
@@ -48,7 +48,12 @@
 }
 .cartImg{
     width: 45px;
-    height: 40px;
+    height: 35px;
     padding: 0;
     margin: 0;
+}
+
+.box-info {
+    margin: 0;
+    padding: 0;
 }
