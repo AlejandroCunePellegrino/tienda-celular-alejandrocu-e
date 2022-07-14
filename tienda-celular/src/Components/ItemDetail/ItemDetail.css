@@ -3,8 +3,9 @@ display: flex;
 justify-content: space-evenly;
 height: 400px;
 background-color: #fffcff;
-width: 85%;
+width: 100%;
 margin: auto;
+box-shadow: 2px 2px 2px rgb(4, 17, 22);
 }
 
 

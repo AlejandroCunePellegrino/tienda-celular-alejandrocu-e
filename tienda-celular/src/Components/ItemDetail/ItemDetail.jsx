@@ -2,7 +2,7 @@ import React from "react";
 import ItemDetailcss from './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({image, datail, stock, name, initial}) => {
+const ItemDetail = ({image, detail, stock, name, initial}) => {
     return(
         <div className="box">
             <div className="box-img">
@@ -10,7 +10,7 @@ const ItemDetail = ({image, datail, stock, name, initial}) => {
             </div>
             <div className="box-detail">
                 <h5>{name}</h5>
-                <p>{datail}</p>
+                <p>{detail}</p>
                 <ItemCount stock={stock} initial={initial} />
             </div>
         </div>
