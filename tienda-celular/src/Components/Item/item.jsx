@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import card from './card.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 
 
@@ -9,6 +10,13 @@ import { Link } from "react-router-dom";
 
 const Item = ({name, price, image, stock, initial, link}) => {
    
+    const [gotocart, setGoToCart] = useState(false)
+    const onAdd = (quantity) =>{
+        Swal.fire(`Se agregaron ${quantity} ${name} al carrito`);
+        setGoToCart(true)
+        /* addProduct(product, quantity);  */ 
+    }
+
     return(
         <div className="card col-3 m-1" style={styles.cardContainer} >
             <img src= {image} className="card-img-top" style={styles.cardImg} alt={name} />
@@ -17,7 +25,7 @@ const Item = ({name, price, image, stock, initial, link}) => {
                 <p className="card-text">{price}</p>
                 <Link to={`/product/${link}`}>Ver detalles</Link>
             </div>
-            <ItemCount stock={stock} initial={initial} name={name}/>
+            <ItemCount stock={stock} initial={initial} name={name} onAdd={onAdd}/>
         </div>
     );
 };
