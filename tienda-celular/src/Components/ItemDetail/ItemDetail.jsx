@@ -24,7 +24,7 @@ const ItemDetail = ({product}) => {
             </div>
             <div className="box-detail">
                 <h5>{product.name}</h5>
-                <h6>{product.price}</h6>
+                <h6> $ {product.price}</h6>
                 <p>{product.detail}</p>
                 {
                     gotocart

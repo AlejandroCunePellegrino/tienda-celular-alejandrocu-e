@@ -1,0 +1,9 @@
+
+.box-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-delete{
+    cursor: pointer;
+}

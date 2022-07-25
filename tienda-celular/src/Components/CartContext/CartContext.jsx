@@ -32,8 +32,16 @@ export const CartContext = ({children}) => {
         setCart(cart.filter(product => product.id !== id))
         
     };
+
+    const calcularTotal = () => {
+        let count = 0
+        cart.forEach((prod) => {
+            count += parseInt(prod.price)  * prod.quantity
+        })
+        return count;
+    } 
     return(
-        <Provider value={{clearCart, isInCart, removeProduct, addProduct}}>
+        <Provider value={{clearCart, isInCart, removeProduct, addProduct, cart, setCart, calcularTotal}}>
             {children}
         </Provider>
     )
