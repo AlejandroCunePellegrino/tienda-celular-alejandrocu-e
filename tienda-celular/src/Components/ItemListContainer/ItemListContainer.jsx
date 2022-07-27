@@ -3,6 +3,8 @@ import ItemList from '../ItemList/ItemList'
 import { getProds } from "../../mocks/fakeapi";
 import Spinner from '../Spinner/Spinner';
 import { useParams } from "react-router-dom";
+import {db} from '../../firebase/config.js'
+import {getDocs, collection, query, where} from 'firebase/firestore'
 
 const ItemListContainer = ({greeting}) => {
     
@@ -11,16 +13,27 @@ const ItemListContainer = ({greeting}) => {
 
     const {categoryId} = useParams();
     
+   
 
     useEffect(() => {
+        
+        const qry = categoryId
+            ? query(collection(db, 'Productos'), where('category', '==', categoryId))
+            : collection(db, 'Productos');
+            
+
         setLoading(true)
-        getProds(categoryId)
-        .then(response => setProductList(response))
+        getDocs(qry)
+        .then(res => {
+           const list = res.docs.map(prod => {
+                return {
+                    id: prod.id,
+                    ...prod.data()}
+            })
+            setProductList(list);
+        })
         .catch(error => console.log("clavo la pala", error))
         .finally(() => setLoading(false))
-        /* console.log(categoryId); */
-        
-
     },[categoryId]);
     
     return(
