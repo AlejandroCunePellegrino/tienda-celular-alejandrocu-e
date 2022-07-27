@@ -36,7 +36,7 @@ export const CartContext = ({children}) => {
     const calcularTotal = () => {
         let count = 0
         cart.forEach((prod) => {
-            count += parseInt(prod.price)  * prod.quantity
+            count += prod.price  * prod.quantity
         })
         return count;
     } 

@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
         <div className="container-detail">
             <div className="container-detail-box">
                 <h3 className="text-center">ItemDetailContainer</h3>
-                {loading ? <Spinner /> : <ItemDetail /* name={product.name} image={product.image} price={product.price} stock={product.stock} initial={product.initial} detail={product.detail} */ product={product} />}
+                {loading ? <Spinner /> : <ItemDetail  product={product} />}
             </div>
         </div>
     )
