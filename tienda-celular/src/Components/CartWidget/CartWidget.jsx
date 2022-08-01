@@ -1,26 +1,25 @@
 import React from "react";
-import cart from '../../assets/images/cart.png';
+import cartImg from '../../assets/images/cart.png';
+import { useCartContext } from "../CartContext/CartContext";
+import css from './CartWidget.css'
 
 const CartWidget = () => {
+
+    const {counter} = useCartContext();
+
     return(
-        <div>
-            <button style={styles.buttom}>
-                <img src={cart} alt="cart" style={styles.img} />
+        <div className="boxCartWidget">
+            <div className="boxCounter">
+                <span className="counter">{counter}</span>
+            </div>
+            <button className="buttom">
+                <img src={cartImg} alt="cart" className="imgCart" />
             </button>
         </div>
     )
     
 }
 
-const styles = {
-    buttom: {
-        width: '60px',
-        background: '#fffcff',
-        border: 'none'
-    },
-    img: {
-       width: '100%' 
-    }
-}
+
 
 export default CartWidget

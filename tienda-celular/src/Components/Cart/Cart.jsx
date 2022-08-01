@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {ItemCart} from '../ItemCart/ItemCart'
 import { useCartContext } from "../CartContext/CartContext";
+import {db} from '../../firebase/config'
+import {collection, addDoc, serverTimestamp} from 'firebase/firestore'
 
 const Cart = () => {
 
@@ -12,10 +14,7 @@ const Cart = () => {
     return <h3>El carrito esta vacio</h3>
   }
   
-  useEffect(() => {
-    console.log(calcularTotal);
-  }, [cart])
-  
+ 
   return (
     <>
       <div className="container-fluid">
