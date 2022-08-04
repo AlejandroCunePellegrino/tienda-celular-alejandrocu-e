@@ -54,6 +54,13 @@
 }
 
 .box-info {
-    margin: 0;
+    height: 123px;
+}
+
+.pym {
+    margin: 1px;
     padding: 0;
 }
+/* .text-zize{
+    height: 100px;
+} */

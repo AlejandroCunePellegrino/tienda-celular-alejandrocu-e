@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import ItemList from '../ItemList/ItemList'
-import { getProds } from "../../mocks/fakeapi";
 import Spinner from '../Spinner/Spinner';
 import { useParams } from "react-router-dom";
 import {db} from '../../firebase/config.js'

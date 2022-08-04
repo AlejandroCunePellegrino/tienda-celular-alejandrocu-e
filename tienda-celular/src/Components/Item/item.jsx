@@ -22,10 +22,10 @@ const Item = ({product, link}) => {
     return(
         <div className="card col-3 m-1" style={styles.cardContainer} >
             <img src= {product.image} className="card-img-top" style={styles.cardImg} alt={product.name} />
-            <div className="card-body box-info">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">$ {product.price}</p>
-                <Link to={`/product/${link}`}>Ver detalles</Link>
+            <div className=" pym box-info">
+                <h5 className="card-title pym">{product.name}</h5>
+                <p className="card-text pym">$ {product.price}</p>
+                <Link to={`/product/${link}`} className= "pym">Ver detalles</Link>
             </div>
             <ItemCount stock={product.stock} initial={product.initial} name={product.name} onAdd={onAdd}/>
         </div>
@@ -37,13 +37,13 @@ const styles = {
         padding: 5,
         width: '20%',
         position: 'relative',
-        height: '500px'
+        height: '450px'
     },
     cardImg: {
-        width: '65%',
+        width: '60%',
         objetFit: 'cover',
         objetPosition: 'center center',
-        height: '250px'
+        height: '220px'
     }
 }
 

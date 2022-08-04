@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { getProd } from "../../mocks/fakeapi";
 import Spinner from '../Spinner/Spinner'
 import css from './ItemDetailContainer.css'
 import { useParams } from "react-router-dom";
