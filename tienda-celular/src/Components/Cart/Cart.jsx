@@ -1,24 +1,19 @@
 import React, {useState, useEffect} from "react";
 import {ItemCart} from '../ItemCart/ItemCart'
 import { useCartContext } from "../CartContext/CartContext";
-/* import {db} from '../../firebase/config'
-import {collection, addDoc, serverTimestamp} from 'firebase/firestore' */
+import {db} from '../../firebase/config'
+import {collection, addDoc, serverTimestamp} from 'firebase/firestore' 
 import {Link} from 'react-router-dom'
+import Order from '../Order/Order'
 
 const Cart = () => {
 
   const {cart, clearCart, calcularTotal} = useCartContext();
+  const [ buyFinalized, setBuyFinalized ] = useState(false);
 
-  const order = {
-    buyer: {
-      name: "",
-      email:"",
-      phone:"",
-      adress: ""
-    }
-  }
-  
-  
+  const endBuy = () => {
+    setBuyFinalized(true);
+};
   
   if(cart.length === 0){
     
@@ -44,15 +39,14 @@ const Cart = () => {
       <div>
         <h3>Total $ {calcularTotal()} </h3>
       </div>
-      <form action="">
-        <label htmlFor="fname">Nombre: <input type="text" required id="fname"/></label>
-        <label htmlFor="femail">Email: <input type="text" required id="femail"/></label>
-        <label htmlFor="fphone">Telefono: <input type="number" required id="fphone"/></label>
-        <label htmlFor="fadress">Direccion: <input type="text" required id="fadress"/></label>
-        <input type="submit" />
-      </form>
       <div>
-        <button>Crear orden</button>
+          { buyFinalized  
+          ? (<Order />) 
+          : (
+              <div className="d-flex flex-row align-item-center justify-content-center mt-3">
+                <button onClick={endBuy} className='btn btn-primary'>Finalizar compra!</button>
+              </div>
+          )}
       </div>
     </>
   )
