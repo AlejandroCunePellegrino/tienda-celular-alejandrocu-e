@@ -97,7 +97,7 @@ const Order = () => {
                             required    
                             />
                         <input 
-                            type='text'
+                            type='email'
                             className='form-control mb-3'
                             placeholder='ingrese email'
                             name='email'
