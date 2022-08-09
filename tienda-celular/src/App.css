@@ -3,7 +3,8 @@
     padding: 5px;
 }
 body{
-    background-color: #44CCFF;
+    /* background-image: url('./assets/images/fondo.jpg'); */
+    background-color: #32CBFF;
     position: relative;
     z-index: -1000;
 }

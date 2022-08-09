@@ -1,7 +1,7 @@
 .box{
 display: flex;
 justify-content: space-evenly;
-height: 400px;
+height: 425px;
 background-color: #fffcff;
 width: 100%;
 margin: auto;
@@ -25,4 +25,11 @@ box-shadow: 2px 2px 2px rgb(4, 17, 22);
 .img-a12{
     height: 300px;
     width: 150px;
+}
+.box-text{
+    margin: 0;
+}
+
+h5 {
+    margin: 2px;
 }

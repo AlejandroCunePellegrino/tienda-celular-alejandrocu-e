@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/images/logo.png"
 import CartWidget from '../CartWidget/CartWidget'
 import {Link, NavLink} from 'react-router-dom'
+import navcss from './navbar.css'
 
 
 
@@ -17,9 +18,9 @@ const Navbar = () =>{
     return (
         <header style={styles.container}>
             <Link to="/"><img src={logo} alt="logo" style={styles.imageLogo} /></Link>
-            <h1 style={styles.font}>Tienda celulares</h1>
+            <h1>Online CellShop</h1>
             <nav>
-                {categories.map((category) => <NavLink key={category.id} style={styles.anchors} to={category.route}>{category.name}</NavLink>)}
+                {categories.map((category) => <NavLink key={category.id} className="style-anchors fw-bold" to={category.route}>{category.name}</NavLink>)}
             </nav>
             <Link to="/cart" style={styles.anchors}><CartWidget /></Link>   
         </header>

@@ -34,7 +34,6 @@ const ItemDetailContainer = () => {
     return(
         <div className="container-detail">
             <div className="container-detail-box">
-                <h3 className="text-center">ItemDetailContainer</h3>
                 {loading ? <Spinner /> : <ItemDetail  product={product} />}
             </div>
         </div>

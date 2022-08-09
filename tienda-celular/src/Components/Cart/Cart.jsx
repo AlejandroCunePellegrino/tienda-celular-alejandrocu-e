@@ -5,6 +5,8 @@ import {db} from '../../firebase/config'
 import {collection, addDoc, serverTimestamp} from 'firebase/firestore' 
 import {Link} from 'react-router-dom'
 import Order from '../Order/Order'
+import style from './style.css'
+
 
 const Cart = () => {
 
@@ -34,7 +36,10 @@ const Cart = () => {
         
       </div>
       <div>
-         <button onClick={clearCart}>Limpiar carrito</button>
+        <button className="btn-clean" onClick={clearCart}>
+          Limpiar carrito
+        </button>
+         {/* <button onClick={clearCart}>Limpiar carrito</button> */}
       </div>
       <div>
         <h3>Total $ {calcularTotal()} </h3>
@@ -44,7 +49,7 @@ const Cart = () => {
           ? (<Order />) 
           : (
               <div className="d-flex flex-row align-item-center justify-content-center mt-3">
-                <button onClick={endBuy} className='btn btn-primary'>Finalizar compra!</button>
+                <button onClick={endBuy} className='btn-endBuy'>Finalizar compra!</button>
               </div>
           )}
       </div>

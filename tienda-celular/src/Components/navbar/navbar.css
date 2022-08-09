@@ -1,0 +1,31 @@
+.style-anchors {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    margin: 4px;
+    padding: 2px;
+    color: #05090c;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+  }
+  .style-anchors::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: #0cbeeb;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  .style-anchors:hover {
+    color: #0cbeeb;
+    transform: scale(0.9); 
+  }
+  .style-anchors:hover::before {
+    transform: scale(1);
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+}

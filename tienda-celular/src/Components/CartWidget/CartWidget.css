@@ -6,7 +6,8 @@
 }
 .counter{
     
-    background-color: aqua;
+    background-color: rgb(12, 12, 12);
+    color: #fffcff;
     border-radius: 50%;
     width: 50%;
     padding: 0;

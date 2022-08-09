@@ -24,8 +24,8 @@ const ItemDetail = ({product}) => {
             </div>
             <div className="box-detail">
                 <h5>{product.name}</h5>
-                <h6> $ {product.price}</h6>
-                <p>{product.detail}</p>
+                <h5> $ {product.price}</h5>
+                <p className="lh-sm box-text">{product.detail}</p>
                 {
                     gotocart
                     ? <Link to='/cart'>Terminar compra</Link>
