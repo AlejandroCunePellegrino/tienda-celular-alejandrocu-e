@@ -20,10 +20,12 @@ const Cart = () => {
   if(cart.length === 0){
     
     return (
-      <>
+      
+      <div className="cart-clear">
         <h3>El carrito esta vacio</h3>
         <Link to="/">Volver a ver los productos</Link>
-      </>
+      </div>
+      
     )
       
   }
